@@ -23,9 +23,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--config', default='./configs/Retrieval_flickr_test.yaml')
 parser.add_argument('--seed', default=42, type=int)
 parser.add_argument('--batch_size', default=4, type=int)
-
 parser.add_argument('--text_encoder', default='bert-base-uncased', type=str)
-
 parser.add_argument('--source_model', default='ALBEF', type=str)
 parser.add_argument('--checkpoint', default='./checkpoint', type=str)  
 parser.add_argument('--original_rank_index_path', default='./std_eval_idx/')  
@@ -262,7 +260,7 @@ def retrieval_score(record, model_name, num_image, num_text, device=None):
         score = model.itm_head(output.last_hidden_state[:, 0, :])[:, 1]
         score_matrix_t2i[i, topk_idx] = score
 
-    return score_matrix_i2t, score_matrix_t2i
+    return score_matrix_i2t.cpu().numpy(), score_matrix_t2i.cpu().numpy()
 
 
 @torch.no_grad()
