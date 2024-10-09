@@ -38,7 +38,7 @@ Below we provide running commands for training the contrastive-training perturba
 python train.py --config configs/Retrieval_flickr_train.yaml --source_model ALBEF --source_ckpt $CKPT
 ```
 
-[Download](https://drive.google.com/drive/folders/1XwSiBpdOgbtI0lyjEO6coq_fiObg-9P6?usp=sharing) the pretrained generators and UAPs.
+[Download](https://drive.google.com/drive/folders/1XwSiBpdOgbtI0lyjEO6coq_fiObg-9P6?usp=sharing) the generators and UAPs.
 
 ### Testing
 
