@@ -13,7 +13,7 @@ A PyTorch official implementation for [One Perturbation is Enough: On Generating
 
 ## Visualization
 <!-- ![results](./figures/results.png) -->
-<img src="./figures/visualization.png" width="80%">
+<img src="./figures/visualization.png">
 
 ## Setup
 ### Install dependencies
@@ -24,7 +24,7 @@ conda activate CPGC
 ```  
 ### Prepare datasets and models
 
-- Download the datasets, [Flickr30K](https://shannon.cs.illinois.edu/DenotationGraph/) and [MSCOCO](https://cocodataset.org/#home) and fill the `image_root` in the configuration files.
+- Download the datasets, [Flickr30K](https://shannon.cs.illinois.edu/DenotationGraph/), [MSCOCO](https://cocodataset.org/#home), and fill the `image_root` in the configuration files.
 
 - Download the checkpoints of the finetuned VLP models: [ALBEF](https://github.com/salesforce/ALBEF), [TCL](https://github.com/uta-smile/TCL), [CLIP](https://huggingface.co/openai/clip-vit-base-patch16), [BLIP](https://github.com/salesforce/BLIP), [X-VLM](https://github.com/zengyan-97/X-VLM)
 
