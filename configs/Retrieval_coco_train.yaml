@@ -1,5 +1,5 @@
 annotation_file: './data_annotation/coco_train.json'
-image_root: '../dataset/MSCOCO/eval/'
+image_root: ''
 dataset: 'mscoco'
 
 bert_config: './configs/config_bert.json'

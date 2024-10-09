@@ -1,5 +1,5 @@
 annotation_file: './data_annotation/coco_test.json'
-image_root: '../dataset/MSCOCO/'
+image_root: ''
 dataset: 'mscoco'
 
 bert_config: './configs/config_bert.json'
