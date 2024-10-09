@@ -5,8 +5,8 @@ A PyTorch official implementation for [One Perturbation is Enough: On Generating
 [Jiawei Kong*](https://scholar.google.cz/citations?user=enfcklIAAAAJ&hl=zh-CN), 
 [Wenbo Yu](https://scholar.google.cz/citations?user=ktJxMcgAAAAJ&hl=zh-CN)
 [Bin Chen#](https://scholar.google.com/citations?user=Yl0wv7AAAAAJ&hl=zh-CN),
-[Jiawei Li](https://scholar.google.com/citations?hl=zh-CN&user=AbdZUcIAAAAJ)
-[Shu-Tao Xia](https://www.sigs.tsinghua.edu.cn/xst/main.htm)
+[Jiawei Li](https://scholar.google.com/citations?hl=zh-CN&user=AbdZUcIAAAAJ),
+[Shu-Tao Xia](https://www.sigs.tsinghua.edu.cn/xst/main.htm),
 [Ke Xu](https://www.insc.tsinghua.edu.cn/info/1157/2467.htm)
 
 ![pipeline](./figures/pipeline.png)
@@ -38,11 +38,11 @@ Below we provide running commands for training the contrastive-training perturba
 python train.py --config configs/Retrieval_flickr_train.yaml --source_model ALBEF --source_ckpt $CKPT
 ```
 
-[Download](https://drive.google.com/drive/folders/1XwSiBpdOgbtI0lyjEO6coq_fiObg-9P6?usp=sharing) pretrained generators and UAPs.
+[Download](https://drive.google.com/drive/folders/1XwSiBpdOgbtI0lyjEO6coq_fiObg-9P6?usp=sharing) the pretrained generators and UAPs.
 
 ### Testing
 
-Below we provide running commands for testing our method in Image-Text Retrieval(ITR) task:
+Below we provide running commands for testing our method in Image-Text Retrieval (ITR) task:
 
 ```python
 python eval.py --config configs/Retrieval_flickr_test.yaml --source_model ALBEF  --load_dir $UAP_PATH
