@@ -170,9 +170,9 @@ filter_words = get_filter_words()
 
 
 class TextAttacker():
-    def __init__(self, ref_net, tokenizer, netG=None, z=None, model_name=None, device='cuda', method=None,
-                 temperature=None, alpha=None, min_norm=None, max_norm=None, adv_words=None, lr=2e-4, cls=False,
-                 max_length=30, number_perturbation=1, topk=10, threshold_pred_score=0.3, batch_size=32):
+    def __init__(self, ref_net, tokenizer, netG=None, z=None, model_name=None, device='cuda',temperature=0.1,
+                alpha=None, min_norm=None, max_norm=None, adv_words=None, lr=2e-4, cls=False,max_length=30, 
+                number_perturbation=1, topk=10, threshold_pred_score=0.3, batch_size=32):
         self.ref_net = ref_net
         self.tokenizer = tokenizer
         self.max_length = max_length
@@ -188,7 +188,6 @@ class TextAttacker():
         if self.generator is not None:
             self.generator = self.generator.to(device)
             self.optimG = optim.Adam(self.generator.parameters(), lr=lr, betas=(0.5, 0.999))
-        self.method = method
         self.temperature = temperature
         self.alpha = alpha
         self.adv_words = adv_words
@@ -246,8 +245,7 @@ class TextAttacker():
                 adv_txt_embeds = adv_txt_output['text_feat'][:, 0, :]
             else:
                 adv_txt_embeds = adv_txt_output['text_feat'].flatten(1)
-            loss_infoNCE = self.loss_func(adv_txt_embeds, img_embeds, txt2img, target_img_embeds, self.temperature,
-                                          self.method)
+            loss_infoNCE = self.loss_func(adv_txt_embeds, img_embeds, txt2img, target_img_embeds, self.temperature)
             criterion_MSE = torch.nn.MSELoss(reduce=True, size_average=False)
             loss_MSE = criterion_MSE(adv_txt_embeds, origin_embeds)
             loss = loss_infoNCE - self.alpha * loss_MSE

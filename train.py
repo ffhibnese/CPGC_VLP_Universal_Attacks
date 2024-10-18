@@ -1,6 +1,5 @@
 import argparse
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = '0,1,2,3'
 from torch.autograd import Variable
 import ruamel.yaml as yaml
 import numpy as np
@@ -68,11 +67,11 @@ def train(model, ref_model, tokenizer, data_loader, target_loader, device, args)
     if args.source_model in ['ALBEF', 'TCL', 'BLIP', 'XVLM']:
         context_dim = 256
         dim = 3
-        word_embedding = torch.load("word_embedding_{}.pth".format(args.source_model))
+        word_embedding = torch.load("word_embedding_{}.pth".format(args.source_model)).to(device).detach()
     else:
         context_dim = 512
         dim = 2
-        word_embedding = torch.load("word_embedding_CLIP.pth")
+        word_embedding = torch.load("word_embedding_CLIP.pth").to(device).detach()
     norms = torch.norm(word_embedding, p=2, dim=1)
     max_norm, _ = torch.max(norms, dim=0)
     min_norm, _ = torch.min(norms, dim=0)
