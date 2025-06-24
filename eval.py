@@ -187,7 +187,7 @@ def retrieval_eval(record, ref_model, tokenizer, blip_tokenizer, target_transfor
         if model_name in ['ALBEF', 'TCL', 'XVLM', 'BLIP']:
             record[model_name]['score_matrix_i2t'], record[model_name]['score_matrix_t2i'] = retrieval_score(record, model_name, num_image, num_text, device=device)
         else:
-            sims_matrix = record[model_name]['image_feats'] @ record[model_name]['text_feat'].t()
+            sims_matrix = record[model_name]['image_feats'] @ record[model_name]['text_feats'].t()
             record[model_name]['score_matrix_i2t'] = sims_matrix.cpu().numpy()
             record[model_name]['score_matrix_t2i'] = sims_matrix.t().cpu().numpy()
     return 
