@@ -1,11 +1,12 @@
 # One Perturbation is Enough: On Generating Universal Adversarial Perturbations against Vision-Language Pre-training Models
-A PyTorch official implementation for [One Perturbation is Enough: On Generating Universal Adversarial Perturbations against Vision-Language Pre-training Models](https://arxiv.org/abs/2406.05491).
+[ICCV 2025] A PyTorch official implementation for [One Perturbation is Enough: On Generating Universal Adversarial Perturbations against Vision-Language Pre-training Models](https://arxiv.org/abs/2406.05491).
 
 [Hao Fang*](https://scholar.google.cz/citations?user=12237G0AAAAJ&hl=zh-CN),
 [Jiawei Kong*](https://scholar.google.cz/citations?user=enfcklIAAAAJ&hl=zh-CN), 
 [Wenbo Yu](https://scholar.google.cz/citations?user=ktJxMcgAAAAJ&hl=zh-CN)
 [Bin Chen#](https://scholar.google.com/citations?user=Yl0wv7AAAAAJ&hl=zh-CN),
 [Jiawei Li](https://scholar.google.com/citations?hl=zh-CN&user=AbdZUcIAAAAJ),
+[Hao Wu](),
 [Shu-Tao Xia](https://www.sigs.tsinghua.edu.cn/xst/main.htm),
 [Ke Xu](https://www.insc.tsinghua.edu.cn/info/1157/2467.htm)
 
