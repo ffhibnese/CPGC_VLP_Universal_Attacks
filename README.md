@@ -3,7 +3,7 @@
 
 [Hao Fang*](https://scholar.google.cz/citations?user=12237G0AAAAJ&hl=zh-CN),
 [Jiawei Kong*](https://scholar.google.cz/citations?user=enfcklIAAAAJ&hl=zh-CN), 
-[Wenbo Yu](https://scholar.google.cz/citations?user=ktJxMcgAAAAJ&hl=zh-CN)
+[Wenbo Yu](https://scholar.google.cz/citations?user=ktJxMcgAAAAJ&hl=zh-CN),
 [Bin Chen#](https://scholar.google.com/citations?user=Yl0wv7AAAAAJ&hl=zh-CN),
 [Jiawei Li](https://scholar.google.com/citations?hl=zh-CN&user=AbdZUcIAAAAJ),
 [Hao Wu](),
